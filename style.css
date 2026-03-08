@@ -1,0 +1,205 @@
+/* GENERAL */
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#fffaf5;
+color:#333;
+scroll-behavior:smooth;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:url("background4.avif") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero span{
+color:#ffd700;
+}
+
+/* SCROLL DOWN */
+
+.scroll-down{
+font-size:30px;
+margin-top:30px;
+animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(10px)}
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+/* COUPLE */
+
+.couple-container{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.person img{
+width:220px;
+border-radius:50%;
+}
+
+/* TIMELINE */
+
+.timeline{
+max-width:600px;
+margin:auto;
+}
+
+.timeline-item{
+margin:40px 0;
+}
+
+/* EVENTS */
+
+.event-container{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.event-card{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+width:200px;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery-grid img{
+width:100%;
+transition:0.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.1);
+}
+
+/* RSVP */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+margin:auto;
+}
+
+input,select,textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#e8a9a9;
+border:none;
+padding:12px;
+color:white;
+cursor:pointer;
+}
+
+/* FADE ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HEART ANIMATION */
+
+.hearts::before{
+content:"❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤";
+position:fixed;
+top:-10px;
+left:0;
+width:100%;
+text-align:center;
+animation:fall 10s linear infinite;
+opacity:0.4;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px)}
+100%{transform:translateY(100vh)}
+}
+
+/* SCRATCH CARD */
+
+.scratch-section{
+background:#fff3f5;
+padding:80px 20px;
+}
+
+.scratch-container{
+position:relative;
+width:320px;
+margin:auto;
+}
+
+.scratch-text{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:bold;
+color:#333;
+}
+
+#scratchCard{
+position:relative;
+background:gold;
+border-radius:10px;
+cursor:pointer;
+}
+
+.scratch-instruction{
+margin-top:10px;
+font-size:14px;
+color:#777;
+}
